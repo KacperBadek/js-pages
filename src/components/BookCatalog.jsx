@@ -3,13 +3,13 @@ import AddBook from "./AddBook";
 import '../kolorki.css';
 
 const BookCatalog = ({ ksiegi }) => {
-    const [books, setBooks] = useState(ksiegi || []); // Initialize with prop or empty array
+    const [books, setBooks] = useState(ksiegi || []);
     const [filter, setFilter] = useState("None");
 
     const filteredBooks = filter === "None" ? books : books.filter(book => book.category === filter);
 
     const handleAddBook = (newBook) => {
-        setBooks((prevBooks) => [...prevBooks, newBook]); // Add new book
+        setBooks((prevBooks) => [...prevBooks, newBook]);
     };
 
     return (

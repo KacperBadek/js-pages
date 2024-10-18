@@ -31,7 +31,7 @@ const AddBook = ({dodaj}) => {
                 <label htmlFor="category">Category:</label>
                 <input type="text" id="category" name="category" value={category}
                        onChange={(e) => setCategory(e.target.value)}/><br/>
-                <label htmlFor="description">Description</label>
+                <label htmlFor="description">Description:</label>
                 <input type="text" id="description" name="description" value={description}
                        onChange={(e) => setDescription(e.target.value)}/><br/>
                 <button type="submit">Dodaj</button>

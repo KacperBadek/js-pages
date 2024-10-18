@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    mode: 'development',
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
@@ -18,7 +19,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.css$/, // Przetwarzaj pliki CSS
+                test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
         ],
@@ -33,6 +34,6 @@ module.exports = {
     ],
     devtool: 'source-map',
     devServer: {
-        contentBase: './dist',
+        static: './dist', // Updated line
     },
 };
